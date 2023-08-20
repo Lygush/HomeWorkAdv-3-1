@@ -14,6 +14,10 @@ public:
         delete[] arr;
     }
 
+    smart_array(const smart_array&) = delete;
+
+    smart_array& operator=(const smart_array&) = delete;
+
     void add_element(int elem) {
         if (logical_index == size) {
             throw std::exception("Выход за пределы массива!");
